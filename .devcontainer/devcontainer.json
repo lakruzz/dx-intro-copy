@@ -1,0 +1,16 @@
+{
+	"image": "mcr.microsoft.com/devcontainers/universal:2",
+	"features": {
+		"ghcr.io/devcontainers/features/azure-cli:1": {}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-vscode.vscode-github-issue-notebooks",
+				"GitHub.copilot",
+				"GitHub.copilot-chat"
+			]
+		}
+	},
+	"postCreateCommand": "git config --local --get include.path | grep -e ../.gitconfig || git config --local --add include.path ../.gitconfig"
+}
